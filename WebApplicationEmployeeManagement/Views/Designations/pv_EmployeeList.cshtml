@@ -1,0 +1,36 @@
+﻿@using WebApplicationEmployeeManagement.ViewModel
+@model List<WebApplicationEmployeeManagement.ViewModel.EmployeeInfo>
+
+
+<div class=" table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Designation</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (EmployeeInfo employee in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayTextFor(model => employee.ID)</td>
+                    <td>@Html.DisplayTextFor(model => employee.Name)</td>
+                    <td>@Html.DisplayTextFor(model => employee.Gender)</td>
+                    <td>@Html.DisplayTextFor(model => employee.Designation)</td>
+                    <td>@Html.DisplayTextFor(model => employee.Salary)</td>
+
+                </tr>
+
+
+            }
+
+
+        </tbody>
+    </table>
+</div>
+
